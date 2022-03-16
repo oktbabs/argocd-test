@@ -1,19 +1,16 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  creationTimestamp: null
   labels:
     app: wonderful-busy-box
   name: wonderful-busy-box
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
       app: wonderful-busy-box
-  strategy: {}
   template:
     metadata:
-      creationTimestamp: null
       labels:
         app: wonderful-busy-box
     spec:
@@ -22,5 +19,3 @@ spec:
         name: busybox
         ports:
         - containerPort: 5701
-        resources: {}
-status: {}
