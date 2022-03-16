@@ -8,7 +8,7 @@ spec:
   source:
     repoURL: https://github.com/oktbabs/argocd-test.git
     targetRevision: HEAD
-    path: guestbook
+    path: nginx
   destination:
     server: https://kubernetes.default.svc
-    namespace: guestbook
+    namespace: default
