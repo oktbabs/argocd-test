@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  creationTimestamp: "2022-03-22T08:19:19Z"
+  labels:
+    kubernetes.io/metadata.name: secure
+  name: secure
+  resourceVersion: "103805"
+  uid: 547d4be0-5f8e-4ad8-a8a6-713161046980
+spec:
+  finalizers:
+  - kubernetes
+status:
+  phase: Active

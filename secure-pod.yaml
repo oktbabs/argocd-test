@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: secure-pod
+  namespace: secure
+spec:
+  containers:
+  - name: secure-container
+    image: busybox
+    command: [ 'sh', '-c', 'echo $SECURE_PASS; sleep 3600' ]
+    ports:
+    - containerPort: 8700
+    env:
+    - name: SECURE_PASS
+      valueFrom:
+        secretKeyRef:
+          name: secure-code
+          key: code
+  
